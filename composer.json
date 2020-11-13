@@ -1,0 +1,36 @@
+{
+    "name": "payjs-cn/laravel-admin-payjs",
+    "description": "laravel-admin 对接 PAYJS 的扩展",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/payjs-cn/laravel-admin-payjs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dedemao",
+            "email": "884358@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Payjs\\Payjs\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Payjs\\Payjs\\PayjsServiceProvider"
+            ]
+        }
+    }
+}
